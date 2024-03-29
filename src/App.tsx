@@ -3,6 +3,7 @@ import Home from "./pages/Home.tsx";
 import Products from "./pages/Products.tsx";
 import RootLayout from "./pages/RootLayout.tsx";
 import Error from "./pages/Error.tsx";
+import ProductDetails from "./pages/ProductDetails.tsx";
 
 // define the router
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+      },
+      {
+        path: "/products/:productId",
+        element: <ProductDetails />,
       },
     ],
   },
