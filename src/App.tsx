@@ -8,20 +8,20 @@ import ProductDetails from "./pages/ProductDetails.tsx";
 // define the router
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/root",
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />,
       },
       {
-        path: "/products",
+        path: "products",
         element: <Products />,
       },
       {
-        path: "/products/:productId",
+        path: "products/:productId",
         element: <ProductDetails />,
       },
     ],

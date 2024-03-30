@@ -1,19 +1,16 @@
-﻿import { useParams } from "react-router-dom";
+﻿import { Link, useParams } from "react-router-dom";
 const PRODUCTS = [
   {
     id: "p1",
     title: "Red Scarf",
-    description: "A pretty red scarf.",
   },
   {
     id: "p2",
     title: "Blue T-Shirt",
-    description: "A pretty blue t-shirt.",
   },
   {
     id: "p3",
     title: "Green Trousers",
-    description: "A pair of lightly green trousers.",
   },
 ];
 export default function ProductDetails() {
@@ -28,8 +25,13 @@ export default function ProductDetails() {
         {PRODUCTS.find((prod) => prod.id === params.productId).title}
       </p>
       <p>
-        Product Description:{" "}
-        {PRODUCTS.find((prod) => prod.id === params.productId).description}
+        {/*relative="path" vs relative="route". */}
+        {/*relative="path" will navigate to the path of the parent route, */}
+        {/*simply removing the last segment of the current active path,*/}
+        {/*while relative="route" will navigate to the parent route itself,*/}
+        <Link to=".." relative={"path"}>
+          Back
+        </Link>
       </p>
     </>
   );
