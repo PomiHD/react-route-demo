@@ -8,12 +8,12 @@ import ProductDetails from "./pages/ProductDetails.tsx";
 // define the router
 const router = createBrowserRouter([
   {
-    path: "/root",
+    path: "/",
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "",
+        index: true, // equal to path: "/"
         element: <Home />,
       },
       {
